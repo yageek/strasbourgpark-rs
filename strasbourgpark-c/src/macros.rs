@@ -1,4 +1,4 @@
-
+use libc::{c_char, c_int};
 macro_rules! fn_get_string {
      ($fn_name:ident, $ptr:ty, $var:ident) => {
 

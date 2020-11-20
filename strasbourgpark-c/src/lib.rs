@@ -1,20 +1,20 @@
-use libc::{c_char, c_int};
-use strasbourgpark::api::{LocationOpenData, Record};
-
 #[macro_use]
 mod macros;
 mod api;
 
-pub unsafe extern "C" fn record_get_id<T>(
-    record: *const Record<T>,
-    id: *mut *const c_char,
-    length: *mut c_int,
-) {
-    debug_assert!(!record.is_null());
-    let record = &*record;
-    *id = record.id.as_ptr() as *const c_char;
-    *length = record.id.len() as c_int;
+use libc::c_int;
+use strasbourgpark::Client;
+
+#[no_mangle]
+pub unsafe extern "C" fn strasbourg_park_client_init(client: *mut *const Client) -> c_int {
+    let value = match Client::new() {
+        Ok(client) => Box::into_raw(Box::new(client)),
+        Err(_) => return -1,
+    };
+
+    *client = value;
+    return 0;
 }
 
-fn_get_string!(strasbourgpark_location_get_id, LocationOpenData, id);
-
+#[no_mangle]
+pub unsafe extern "C" strasbourg_park_client_free()
