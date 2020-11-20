@@ -1,9 +1,20 @@
-#include <cstdarg>
-#include <cstdint>
-#include <cstdlib>
-#include <ostream>
-#include <new>
+#include <stdarg.h>
+#include <stdbool.h>
+#include <stdint.h>
+#include <stdlib.h>
 
-typedef struct SPLocationOpenData SPLocationOpenData;
+/**
+ * A `Client` allowing to download the location and status of the parking.
+ */
+typedef struct Client Client;
 
-void strasbourgpark_location_get_id(SPLocationOpenData *location, char **buff, size_t length);
+typedef struct LocationOpenData LocationOpenData;
+
+void strasbourg_park_client_free(Client *client);
+
+int strasbourg_park_client_init(const Client **client);
+
+/**
+ * Retrieve the identifier from a location
+ */
+void strasbourgpark_location_get_id(const LocationOpenData *ptr, const char **id, int *length);

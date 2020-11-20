@@ -17,4 +17,6 @@ pub unsafe extern "C" fn strasbourg_park_client_init(client: *mut *const Client)
 }
 
 #[no_mangle]
-pub unsafe extern "C" strasbourg_park_client_free()
+pub unsafe extern "C" fn strasbourg_park_client_free(client: *mut Client) {
+    Box::from_raw(client);
+}

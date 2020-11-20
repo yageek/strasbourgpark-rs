@@ -1,0 +1,6 @@
+[parse]
+parse_deps = true
+include = ["strasbourgpark"]
+
+[parse.expand]
+crates = ["strasbourgpark-c"]
