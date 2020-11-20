@@ -1,0 +1,350 @@
+{
+    "nhits": 29,
+    "parameters": {
+        "dataset": [
+            "parkings"
+        ],
+        "timezone": "UTC",
+        "rows": 10,
+        "format": "json"
+    },
+    "records": [
+        {
+            "datasetid": "parkings",
+            "recordid": "b6585e4c0238ccde0a5ae0dc4e3f654fbc2d0ad1",
+            "fields": {
+                "city": "Strasbourg",
+                "citycode": "C_482",
+                "friendlyurl": "https://www.strasbourg.eu/lieu/-/entity/id/687118",
+                "name": "Parking public \u2013 Centre administratif",
+                "accessfordeaf": 0,
+                "districtcode": "SQ_08",
+                "accessfordeficient": 0,
+                "accessforelder": 0,
+                "accessforwheelchair": 0,
+                "zipcode": "67000",
+                "accessforblind": 0,
+                "street": "1 parc de l\u2019\u00c9toile",
+                "idsurfs": "1791_DEP_28",
+                "address": "1 parc de l\u2019\u00c9toile 67000 Strasbourg France",
+                "position": [
+                    48.5729892619,
+                    7.75367351195
+                ],
+                "types": "Cat_22_05"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.75367351195,
+                    48.5729892619
+                ]
+            },
+            "record_timestamp": "2019-04-03T03:20:15+00:00"
+        },
+        {
+            "datasetid": "parkings",
+            "recordid": "28ccd31e632f5dbf966360ce0e0d61128b40bfb7",
+            "fields": {
+                "city": "Strasbourg",
+                "citycode": "C_482",
+                "friendlyurl": "https://www.strasbourg.eu/lieu/-/entity/id/687078",
+                "description": "Parking g\u00e9r\u00e9 par PARCUS.  \u00a0  Parking moyenne dur\u00e9e",
+                "accessfordeaf": 0,
+                "districtcode": "SQ_03",
+                "accessfordeficient": 0,
+                "accessforelder": 0,
+                "accessforwheelchair": 1,
+                "zipcode": "67000",
+                "accessforblind": 0,
+                "street": "Rue des Halles",
+                "idsurfs": "1386_DEP_12",
+                "address": "Rue des Halles 67000 Strasbourg France",
+                "position": [
+                    48.5879606695,
+                    7.74014892919
+                ],
+                "types": "Cat_22_02",
+                "name": "Parking P3 Wilson"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.74014892919,
+                    48.5879606695
+                ]
+            },
+            "record_timestamp": "2019-04-03T03:20:15+00:00"
+        },
+        {
+            "datasetid": "parkings",
+            "recordid": "8acedbcda00fe520ed1b80b244979c56d257f0fa",
+            "fields": {
+                "city": "Strasbourg",
+                "citycode": "C_482",
+                "friendlyurl": "https://www.strasbourg.eu/lieu/-/entity/id/687080",
+                "description": "Parking g\u00e9r\u00e9 par la CEGIP.  Ferm\u00e9 les dimanches et les jours f\u00e9ri\u00e9s.  \u00a0  Parking moyenne dur\u00e9e",
+                "accessfordeaf": 0,
+                "districtcode": "SQ_08",
+                "accessfordeficient": 0,
+                "accessforelder": 0,
+                "accessforwheelchair": 1,
+                "zipcode": "67000",
+                "accessforblind": 0,
+                "street": "3 place Dauphine",
+                "idsurfs": "1392_DEP_18",
+                "address": "3 place Dauphine 67000 Strasbourg France",
+                "position": [
+                    48.5732829348,
+                    7.75983823965
+                ],
+                "types": "Cat_22_02",
+                "name": "Parking Rivetoile"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.75983823965,
+                    48.5732829348
+                ]
+            },
+            "record_timestamp": "2019-04-03T03:20:15+00:00"
+        },
+        {
+            "datasetid": "parkings",
+            "recordid": "14ec4e93959d48d15d6fbb0dd3ccc7cd11a96a32",
+            "fields": {
+                "city": "Eckbolsheim",
+                "citycode": "C_118",
+                "friendlyurl": "https://www.strasbourg.eu/lieu/-/entity/id/687114",
+                "description": "Parking g\u00e9r\u00e9 par la Ville et Eurom\u00e9tropole de Strasbourg.",
+                "accessfordeaf": 0,
+                "accessfordeficient": 0,
+                "accessforelder": 0,
+                "accessforwheelchair": 1,
+                "zipcode": "67201",
+                "accessforblind": 0,
+                "street": "All\u00e9e du Z\u00e9nith",
+                "idsurfs": "1400_DEP_26",
+                "address": "All\u00e9e du Z\u00e9nith 67201 Eckbolsheim France",
+                "position": [
+                    48.5953352876,
+                    7.68646701218
+                ],
+                "types": "Cat_22_05",
+                "name": "Parking Z\u00e9nith"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.68646701218,
+                    48.5953352876
+                ]
+            },
+            "record_timestamp": "2019-04-03T03:20:15+00:00"
+        },
+        {
+            "datasetid": "parkings",
+            "recordid": "b8445287ec7a6fa4a99e535c9a042a3c7a4b09e1",
+            "fields": {
+                "city": "Strasbourg",
+                "citycode": "C_482",
+                "friendlyurl": "https://www.strasbourg.eu/lieu/-/entity/id/687116",
+                "name": "P1 Esplanade - Centre commercial",
+                "accessfordeaf": 0,
+                "districtcode": "SQ_02",
+                "accessfordeficient": 0,
+                "accessforelder": 0,
+                "accessforwheelchair": 0,
+                "zipcode": "67000",
+                "accessforblind": 0,
+                "street": "Rue de Londres",
+                "idsurfs": "1703_DEP_27",
+                "address": "Rue de Londres 67000 Strasbourg France",
+                "position": [
+                    48.5775007076,
+                    7.77158518917
+                ],
+                "types": "Cat_22_05"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.77158518917,
+                    48.5775007076
+                ]
+            },
+            "record_timestamp": "2019-04-03T03:20:15+00:00"
+        },
+        {
+            "datasetid": "parkings",
+            "recordid": "aad2371db20d8d6d31ba45a1e3265cca911e88e9",
+            "fields": {
+                "city": "Strasbourg",
+                "citycode": "C_482",
+                "friendlyurl": "https://www.strasbourg.eu/lieu/-/entity/id/687096",
+                "description": "Parking P+R g\u00e9r\u00e9 par la CTS  Ouverture 7 jours sur 7 - 24 heures sur 24 (attention : le 1er mai, tous les P+R sont accessibles pour le stationnement mais le r\u00e9seau bus et trams ne fonctionne pas) -\u00a0Acc\u00e8s direct aux trams et au bus G du lundi au samedi d\u00e8s 4h30 et jusqu\u2019\u00e0 0h30, les dimanches et jours f\u00e9ri\u00e9s (sauf 1er mai) de 5h30 \u00e0 0h30 (selon fiches horaires en vigueur). - Sortie possible 24h/24 - Paiement aux caisses automatiques \u00e0 l\u2019arriv\u00e9e dans le parking ou au retour Stationnement limit\u00e9 \u00e0 une journ\u00e9e  Un titre unique est d\u00e9livr\u00e9 pour tous les occupants du v\u00e9hicule (jusqu'\u00e0 7 personnes) qui doivent de fait, voyager ensemble. Ce titre est valable pour un aller-retour effectu\u00e9 dans la journ\u00e9e.  Au-del\u00e0 de l\u2019horaire 4h30 \u00e0 1h30, une majoration de 10\u20ac par jour suppl\u00e9mentaire est appliqu\u00e9e.  Abonn\u00e9s CTS  Le titulaire d'un abonnement CTS (\u00e0 l'exception des abonnements 4-18 ANS et Ancien Combattant) ou d'un\u00a0PASS MOBILITE\u00a0acc\u00e8de gratuitement \u00e0 ce Parking Relais.  Dispositif camping-cars  Les campings cars peuvent acc\u00e9der au P+R Elsau.\u00a0Tous les occupants du camping-car b\u00e9n\u00e9ficient de contremarques pour se d\u00e9placer sur le r\u00e9seau Bus-Tram (dans la limite de 7 personnes) :  Ouvert 7j/7 de 7h00 \u00e0 20h00 (y compris les jours f\u00e9ri\u00e9s, le 1er mai le parking est accessible mais le r\u00e9seau bus et trams ne fonctionne pas). Le stationnement de nuit est interdit\u00a0  Dispositif carsde tourisme  Ouvert 7j/7 -\u00a024h/24 (y compris les jours f\u00e9ri\u00e9s, le 1er mai le parking est accessible mais le r\u00e9seau bus et trams ne fonctionne pas)  Sortie possible \u00e0 tout moment (sortie \u00e0 effectuer avant 9h00 le lendemain matin au plus tard)  Un agent de s\u00e9curit\u00e9 est pr\u00e9sent 24h/24 sur le site mais le stationnement reste sous la responsabilit\u00e9 des usagers.  \u00a0  Parking longue dur\u00e9e",
+                "accessfordeaf": 0,
+                "districtcode": "SQ_09",
+                "accessfordeficient": 0,
+                "accessforelder": 0,
+                "accessforwheelchair": 1,
+                "zipcode": "67000",
+                "accessforblind": 0,
+                "street": "Rue Charles Winter",
+                "idsurfs": "1380_DEP_6",
+                "address": "Rue Charles Winter 67000 Strasbourg France",
+                "position": [
+                    48.5684033862,
+                    7.73031009299
+                ],
+                "types": "Cat_22_03;Cat_22_04",
+                "name": "Parking Elsau"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.73031009299,
+                    48.5684033862
+                ]
+            },
+            "record_timestamp": "2019-04-03T03:20:15+00:00"
+        },
+        {
+            "datasetid": "parkings",
+            "recordid": "cecfac70b9cf69f9620127157a448bffed0fe5d0",
+            "fields": {
+                "city": "Strasbourg",
+                "citycode": "C_482",
+                "friendlyurl": "https://www.strasbourg.eu/lieu/-/entity/id/687064",
+                "description": "Parking g\u00e9r\u00e9 par INDIGO.  Le parking Gare Courte dur\u00e9e dessert la Gare TGV de Strasbourg. Il dispose d'un acc\u00e8s aux quais.  \u00a0  Parking courte dur\u00e9e",
+                "accessfordeaf": 0,
+                "districtcode": "SQ_03",
+                "accessfordeficient": 0,
+                "accessforelder": 0,
+                "accessforwheelchair": 1,
+                "zipcode": "67000",
+                "accessforblind": 0,
+                "street": "Place de la Gare",
+                "idsurfs": "1381_DEP_7",
+                "address": "Place de la Gare 67000 Strasbourg France",
+                "position": [
+                    48.5843287981,
+                    7.73587617577
+                ],
+                "types": "Cat_22_01",
+                "name": "Parking Gare courte dur\u00e9e"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.73587617577,
+                    48.5843287981
+                ]
+            },
+            "record_timestamp": "2019-04-03T03:20:15+00:00"
+        },
+        {
+            "datasetid": "parkings",
+            "recordid": "76775de7beb5c986ed6aa661ae773373e0b1effe",
+            "fields": {
+                "city": "Strasbourg",
+                "citycode": "C_482",
+                "friendlyurl": "https://www.strasbourg.eu/lieu/-/entity/id/687076",
+                "description": "Parking g\u00e9r\u00e9 par PARCUS.  \u00a0  Parking moyenne dur\u00e9e",
+                "accessfordeaf": 0,
+                "districtcode": "SQ_01",
+                "accessfordeficient": 0,
+                "accessforelder": 0,
+                "accessforwheelchair": 1,
+                "zipcode": "67000",
+                "accessforblind": 0,
+                "street": "Rue de S\u00e9bastopol",
+                "idsurfs": "1385_DEP_11",
+                "address": "Rue de S\u00e9bastopol 67000 Strasbourg France",
+                "position": [
+                    48.5867897638,
+                    7.74215216512
+                ],
+                "types": "Cat_22_02",
+                "name": "Parking P2 Sebastopol"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.74215216512,
+                    48.5867897638
+                ]
+            },
+            "record_timestamp": "2019-04-03T03:20:15+00:00"
+        },
+        {
+            "datasetid": "parkings",
+            "recordid": "531595037a274267dcd64944aa60a785102811e9",
+            "fields": {
+                "city": "Strasbourg",
+                "citycode": "C_482",
+                "friendlyurl": "https://www.strasbourg.eu/lieu/-/entity/id/687106",
+                "description": "Parking P+R g\u00e9r\u00e9 par la CTS  Ouverture 7 jours sur 7 - 24 heures sur 24 (attention : le 1er mai, tous les P+R sont accessibles pour le stationnement mais le r\u00e9seau bus et trams ne fonctionne pas) -\u00a0Acc\u00e8s direct aux trams et au bus G du lundi au samedi d\u00e8s 4h30 et jusqu\u2019\u00e0 0h30, les dimanches et jours f\u00e9ri\u00e9s (sauf 1er mai) de 5h30 \u00e0 0h30 (selon fiches horaires en vigueur). - Sortie possible 24h/24 - Paiement aux caisses automatiques \u00e0 l\u2019arriv\u00e9e dans le parking ou au retour - Tous les P+R sont accessibles aux v\u00e9hicules d'une hauteur maximale de 1m90. Au-del\u00e0, merci de vous rendre au P+R Elsau. Stationnement limit\u00e9 \u00e0 une journ\u00e9e  Un titre unique est d\u00e9livr\u00e9 pour tous les occupants du v\u00e9hicule (jusqu'\u00e0 7 personnes) qui doivent de fait, voyager ensemble. Ce titre est valable pour un aller-retour effectu\u00e9 dans la journ\u00e9e.  Au-del\u00e0 de l\u2019horaire 4h30 \u00e0 1h30, une majoration de 10 \u20ac par jour suppl\u00e9mentaire est appliqu\u00e9e.  Acc\u00e8s illimit\u00e9 avec un abonnement  \u00a0  Parking longue dur\u00e9e  Cet acc\u00e8s requiert un abonnement sp\u00e9cifique : ABONNEMENT P+R ROTONDE\u00a0et PASS MOBILITE Parking longue dur\u00e9e",
+                "accessfordeaf": 0,
+                "districtcode": "SQ_06",
+                "accessfordeficient": 0,
+                "accessforelder": 0,
+                "accessforwheelchair": 1,
+                "zipcode": "67000",
+                "accessforblind": 0,
+                "street": "Rue de la Rotonde",
+                "idsurfs": "1394_DEP_20",
+                "address": "Rue de la Rotonde 67000 Strasbourg France",
+                "position": [
+                    48.5912264325,
+                    7.72610093327
+                ],
+                "types": "Cat_22_03;Cat_22_04",
+                "name": "Parking Rotonde"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.72610093327,
+                    48.5912264325
+                ]
+            },
+            "record_timestamp": "2019-04-03T03:20:15+00:00"
+        },
+        {
+            "datasetid": "parkings",
+            "recordid": "f02373c1cdd1f4e08b166e14e3a1050bff8d1b51",
+            "fields": {
+                "city": "Strasbourg",
+                "citycode": "C_482",
+                "friendlyurl": "https://www.strasbourg.eu/lieu/-/entity/id/687090",
+                "description": "Parking g\u00e9r\u00e9 par PARCUS.  Le parking Centre historique - Petite France est id\u00e9alement situ\u00e9 pour les touristes \u00e0 l'entr\u00e9e du quartier historique de La Petite France. Il se trouve sous le Mus\u00e9e d'art moderne et contemporain. A deux pas du centre ville \u00e9galement.  \u00a0  Parking longue dur\u00e9e",
+                "accessfordeaf": 0,
+                "districtcode": "SQ_03",
+                "accessfordeficient": 0,
+                "accessforelder": 0,
+                "accessforwheelchair": 1,
+                "zipcode": "67000",
+                "accessforblind": 0,
+                "street": "Rue de Molsheim",
+                "idsurfs": "1390_DEP_16",
+                "address": "Rue de Molsheim 67000 Strasbourg France",
+                "position": [
+                    48.5791976382,
+                    7.73525856083
+                ],
+                "types": "Cat_22_03",
+                "name": "Parking Centre historique Petite France"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.73525856083,
+                    48.5791976382
+                ]
+            },
+            "record_timestamp": "2019-04-03T03:20:15+00:00"
+        }
+    ]
+}

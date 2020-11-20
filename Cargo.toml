@@ -1,0 +1,25 @@
+[package]
+name = "strasbourgpark"
+version = "0.1.0"
+authors = ["Yannick Heinrich <yannick.heinrich@gmail.com>"]
+edition = "2018"
+
+[workspace]
+members = ["strasbourgpark-c"]
+
+[dependencies]
+bytes = "0.5"
+
+hyper = "0.13"
+hyper-tls = "0.4.3"
+hyper-proxy = "0.8.0"
+
+tokio = { version = "0.2", features = ["full"] }
+futures = "0.3.8"
+
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0.59"
+
+thiserror = "1.0.22"
+log = "0.4"
+

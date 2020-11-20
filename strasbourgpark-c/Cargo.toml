@@ -1,0 +1,13 @@
+[package]
+name = "strasbourgpark-c"
+version = "0.1.0"
+authors = ["Yannick Heinrich <yannick.heinrich@gmail.com>"]
+edition = "2018"
+
+workspace = ".."
+[dependencies]
+libc = "0.2"
+strasbourgpark = {version = "0.1", path = ".."}
+
+[build-dependencies]
+cbindgen = "0.15"

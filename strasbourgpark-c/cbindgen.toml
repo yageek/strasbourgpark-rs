@@ -1,0 +1,12 @@
+language = "C"
+include_version = true
+
+# [export]
+# include = ["LocationOpenData"]
+
+[export.mangle]
+rename_types = "SnakeCase"
+
+[parse]
+parse_deps = true
+include = ["strasbourgparkapi"]
