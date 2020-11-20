@@ -1,10 +1,9 @@
-/* Generated with cbindgen:0.15.0 */
+#include <cstdarg>
+#include <cstdint>
+#include <cstdlib>
+#include <ostream>
+#include <new>
 
-#include <stdarg.h>
-#include <stdbool.h>
-#include <stdint.h>
-#include <stdlib.h>
+typedef struct SPLocationOpenData SPLocationOpenData;
 
-void strasbourgparkapi_location_get_id(const LocationOpenData *location,
-                                       const char **id,
-                                       int *length);
+void strasbourgpark_location_get_id(SPLocationOpenData *location, char **buff, size_t length);

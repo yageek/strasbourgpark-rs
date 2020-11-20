@@ -26,6 +26,8 @@ pub enum ClientError {
     ProxyConfiguration(#[from] hyper::http::uri::InvalidUri),
     #[error(transparent)]
     Serde(#[from] serde_json::Error),
+    #[error(transparent)]
+    Tokio(#[from] tokio::task::JoinError),
 }
 pub(crate) enum HTTPClient {
     Https(hyper::Client<HttpsConnector<hyper::client::HttpConnector>, hyper::Body>),
@@ -113,7 +115,7 @@ impl Client {
 
     async fn fetch_all_pages<T>(&self, uri: &str) -> Result<Vec<T>, ClientError>
     where
-        T: DeserializeOwned,
+        T: DeserializeOwned + Send + 'static,
     {
         // Get the first page
         let first: OpenDataResponse<T> = self.fetch(uri, 0, self.pagination).await?;
@@ -164,7 +166,7 @@ impl Client {
 
     async fn fetch<T>(&self, uri: &str, offset: u32, limit: u32) -> Result<T, ClientError>
     where
-        T: DeserializeOwned,
+        T: DeserializeOwned + Send + 'static,
     {
         let url = format!("{}&start={}&rows={}", uri, offset, limit);
         // Building the request
@@ -183,7 +185,7 @@ impl Client {
         } else {
             // Decoding
             let body = hyper::body::aggregate(stream).await?;
-            let t = serde_json::from_reader(body.reader())?;
+            let t = tokio::task::spawn_blocking(move || serde_json::from_reader(body.reader())).await??;
             Ok(t)
         }
     }

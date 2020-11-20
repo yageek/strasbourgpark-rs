@@ -1,1 +1,1 @@
-pub use strasbourgparkapi::api::{LocationOpenData, Record};
+pub use strasbourgpark::api::{LocationOpenData, Record};

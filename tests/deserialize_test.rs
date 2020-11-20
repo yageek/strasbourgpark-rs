@@ -1,4 +1,4 @@
-use strasbourgparkapi::api::{LocationOpenData, OpenDataResponse, StatusOpenData};
+use strasbourgpark::api::{LocationOpenData, OpenDataResponse, StatusOpenData};
 
 #[test]
 fn deserialize_location() {
