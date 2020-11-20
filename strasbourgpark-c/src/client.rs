@@ -1,25 +1,28 @@
 use crate::runtime::RUN_TIME;
-use libc::c_int;
+use libc::{c_char, c_int, c_void};
 use strasbourgpark::{api::LocationOpenData, Client};
-trait CCallback {
+pub trait CCallback: Send + 'static {
     type Item;
     fn on_success(&self, result: Self::Item);
     fn on_error(&self, result: &str);
 }
 
-trait CClient {
-    fn get_all_locations<C>(&self, callback: C)
+pub trait CClient {
+    fn get_all_locations<C>(&'static self, callback: C)
     where
         C: CCallback<Item = Vec<LocationOpenData>>;
 }
 
 impl CClient for Client {
-    fn get_all_locations<C>(&self, callback: C)
+    fn get_all_locations<C>(&'static self, callback: C)
     where
         C: CCallback<Item = Vec<LocationOpenData>>,
     {
-        RUN_TIME.spawn(async {
-            let res = self.fetch_all_locations().await;
+        RUN_TIME.spawn(async move {
+            match self.fetch_all_locations().await {
+                Ok(root) => callback.on_success(root),
+                Err(_e) => callback.on_error("error"),
+            }
         });
     }
 }
@@ -42,5 +45,18 @@ pub unsafe extern "C" fn strasbourg_park_client_free(client: *mut Client) {
 
 // Loading of the element
 
+#[repr(C)]
+pub struct LocationCallback {
+    owner: *mut c_void,
+    on_success: extern "C" fn(owner: *mut c_void, arg: *const c_char),
+    on_error: extern "C" fn(owner: *mut c_void, arg: *const c_char),
+}
+
 #[no_mangle]
-pub unsafe extern "C" fn strasbourg_park_client_get_locations(client: *mut Client) {}
+pub unsafe extern "C" fn strasbourg_park_client_get_locations(
+    client: *mut Client,
+    callback: LocationCallback,
+) {
+    let client = client.as_ref().unwrap();
+    client.get_all_locations(callback);
+}

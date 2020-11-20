@@ -15,6 +15,12 @@ typedef struct {
   double lng;
 } SPCoordinate;
 
+typedef struct {
+  void *owner;
+  void (*on_success)(void *owner, const char *arg);
+  void (*on_error)(void *owner, const char *arg);
+} SPLocationCallback;
+
 /**
  *Retrieve the `id` as const char.
  */
@@ -90,4 +96,4 @@ int strasbourg_park_client_init(const SPClient **client);
 
 void strasbourg_park_client_free(SPClient *client);
 
-void strasbourg_park_client_get_locations(SPClient *client);
+void strasbourg_park_client_get_locations(SPClient *client, SPLocationCallback callback);
