@@ -1,3 +1,7 @@
+language = "C"
+[export]
+prefix = "SP"
+
 [parse]
 parse_deps = true
 include = ["strasbourgpark"]

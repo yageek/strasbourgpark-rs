@@ -113,8 +113,8 @@ pub struct LocationOpenData {
     pub id: String,
 
     pub city: String,
-    #[serde(rename(deserialize = "zipcode"))]
-    pub zip_code: String,
+
+    pub zipcode: String,
     pub street: String,
     pub address: String,
     #[serde(rename(deserialize = "position"))]
