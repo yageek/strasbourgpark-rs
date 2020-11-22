@@ -3,12 +3,9 @@
 #include <stdint.h>
 #include <stdlib.h>
 
-/**
- * A `Client` allowing to download the location and status of the parking.
- */
-typedef struct SPClient SPClient;
-
 typedef struct SPLocationOpenData SPLocationOpenData;
+
+typedef struct SPWrapperClient SPWrapperClient;
 
 typedef struct {
   double lat;
@@ -17,8 +14,8 @@ typedef struct {
 
 typedef struct {
   void *owner;
-  void (*on_success)(void *owner, const char *arg);
-  void (*on_error)(void *owner, const char *arg);
+  void (*on_success)(const void *owner, const char *arg);
+  void (*on_error)(const void *owner, const char *arg);
 } SPLocationCallback;
 
 /**
@@ -92,8 +89,8 @@ void strasbourgpark_location_get_description(const SPLocationOpenData *ptr,
                                              const char **description,
                                              int *length);
 
-int strasbourg_park_client_init(const SPClient **client);
+int strasbourg_park_client_init(const SPWrapperClient **client);
 
-void strasbourg_park_client_free(SPClient *client);
+void strasbourg_park_client_free(SPWrapperClient *client);
 
-void strasbourg_park_client_get_locations(SPClient *client, SPLocationCallback callback);
+void strasbourg_park_client_get_locations(SPWrapperClient *client, SPLocationCallback callback);
