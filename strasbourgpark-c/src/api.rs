@@ -54,3 +54,8 @@ pub unsafe extern "C" fn strasbourgpark_location_get_description(
         *description = std::ptr::null();
     }
 }
+
+#[repr(C)]
+pub struct LocationOpenDataNative {
+    
+}

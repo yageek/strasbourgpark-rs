@@ -1,7 +1,7 @@
 use std::sync::Arc;
 
 use crate::runtime::RUN_TIME;
-use libc::{c_char, c_int, c_void};
+use libc::{c_char, c_int, c_void, size_t};
 use strasbourgpark::{api::LocationOpenData, Client, ClientError};
 
 pub struct WrapperClient {
@@ -55,8 +55,7 @@ pub unsafe extern "C" fn strasbourg_park_client_free(client: *mut WrapperClient)
 
 #[repr(C)]
 pub struct LocationCallback {
-    owner: *mut c_void,
-    on_success: extern "C" fn(owner: *const c_void, arg: *const c_char),
+    on_success: extern "C" fn(owner: *const c_void, arg: *const LocationOpenData, len: size_t),
     on_error: extern "C" fn(owner: *const c_void, arg: *const c_char),
 }
 
@@ -66,13 +65,15 @@ pub unsafe extern "C" fn strasbourg_park_client_get_locations(
     client: *mut WrapperClient,
     callback: LocationCallback,
 ) {
-    let client = client.as_ref().unwrap();
-    client.get_all_locations(move |result| match result {
+    let ref_client = client.as_ref().unwrap();
+    ref_client.get_all_locations(move |result| match result {
         Ok(r) => {
-            (callback.on_success)(std::ptr::null(), std::ptr::null());
+            // Now we move the data to the C world
+            (callback.on_success)(client as *const c_void, std::ptr::null(), r.len() as size_t);
         }
         Err(e) => {
-            (callback.on_success)(std::ptr::null(), std::ptr::null());
+            println!("Error: {:?}", e);
+            (callback.on_error)(std::ptr::null(), std::ptr::null());
         }
     })
 }

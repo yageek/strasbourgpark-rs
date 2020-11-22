@@ -13,8 +13,7 @@ typedef struct {
 } SPCoordinate;
 
 typedef struct {
-  void *owner;
-  void (*on_success)(const void *owner, const char *arg);
+  void (*on_success)(const void *owner, const SPLocationOpenData *arg, size_t len);
   void (*on_error)(const void *owner, const char *arg);
 } SPLocationCallback;
 
