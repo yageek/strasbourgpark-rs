@@ -23,3 +23,13 @@ fn deserialize_status() {
         value.records[0].id
     );
 }
+
+#[test]
+fn deserialize_bad_payload() {
+    let content = include_str!("samples/status_error.json");
+
+    let value: OpenDataResponse<StatusOpenData> =
+        serde_json::from_str(content).expect("should take errors into account");
+
+    assert_eq!(28, value.records.len());
+}

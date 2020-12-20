@@ -1,0 +1,488 @@
+{
+    "nhits": 30,
+    "parameters": {
+        "dataset": "occupation-parkings-temps-reel",
+        "timezone": "UTC",
+        "rows": 50,
+        "start": 0,
+        "format": "json",
+        "facet": [
+            "etat_descriptif"
+        ]
+    },
+    "records": [
+        {
+            "datasetid": "occupation-parkings-temps-reel",
+            "recordid": "f4382d0b7f6aa4e1fc4436a0ba1273817a0c9e74",
+            "fields": {
+                "nom_parking": "Parking Gare Wodli",
+                "etat": 1,
+                "ident": 10,
+                "infousager": "650",
+                "idsurfs": "1382_DEP_8",
+                "libre": 651,
+                "total": 955,
+                "etat_descriptif": "Ouvert"
+            },
+            "record_timestamp": "2020-12-20T12:51:00.704000+00:00"
+        },
+        {
+            "datasetid": "occupation-parkings-temps-reel",
+            "recordid": "037ccb8c942f442d49158c02e6d077b9bc7ab1a5",
+            "fields": {
+                "nom_parking": "Parking Z\u00e9nith",
+                "etat": 2,
+                "ident": 1,
+                "infousager": "FERME",
+                "idsurfs": "1400_DEP_26",
+                "libre": 0,
+                "total": 3175,
+                "etat_descriptif": "Ferm\u00e9"
+            },
+            "record_timestamp": "2020-12-20T12:51:00.704000+00:00"
+        },
+        {
+            "datasetid": "occupation-parkings-temps-reel",
+            "recordid": "e5e929994ab2df1b99134690f68917bdb421b8b6",
+            "fields": {
+                "nom_parking": "Parking Halles P1 Marais vert",
+                "etat": 1,
+                "ident": 13,
+                "infousager": "510",
+                "idsurfs": "1384_DEP_10",
+                "libre": 514,
+                "total": 534,
+                "etat_descriptif": "Ouvert"
+            },
+            "record_timestamp": "2020-12-20T12:51:00.704000+00:00"
+        },
+        {
+            "datasetid": "occupation-parkings-temps-reel",
+            "recordid": "a55f5317b2b0bcf3c78f91d85511c4bc5ef90a83",
+            "fields": {
+                "nom_parking": "Parking P2 Sebastopol",
+                "etat": 1,
+                "ident": 14,
+                "infousager": "250",
+                "idsurfs": "1385_DEP_11",
+                "libre": 251,
+                "total": 496,
+                "etat_descriptif": "Ouvert"
+            },
+            "record_timestamp": "2020-12-20T12:51:00.704000+00:00"
+        },
+        {
+            "datasetid": "occupation-parkings-temps-reel",
+            "recordid": "3caef8440d2571146467fc20dd39fbea0a298363",
+            "fields": {
+                "nom_parking": "Parking Krimmeri Stade de la Meinau",
+                "etat": 1,
+                "ident": 16,
+                "infousager": "140",
+                "idsurfs": "1389_DEP_15",
+                "libre": 146,
+                "total": 190,
+                "etat_descriptif": "Ouvert"
+            },
+            "record_timestamp": "2020-12-20T12:51:00.704000+00:00"
+        },
+        {
+            "datasetid": "occupation-parkings-temps-reel",
+            "recordid": "91f54a535b39f5443556b3c79caa21ceb255156f",
+            "fields": {
+                "nom_parking": "Parking Rives de l'Aar",
+                "etat": 1,
+                "ident": 18,
+                "infousager": "420",
+                "idsurfs": "1391_DEP_17",
+                "libre": 425,
+                "total": 456,
+                "etat_descriptif": "Ouvert"
+            },
+            "record_timestamp": "2020-12-20T12:51:00.704000+00:00"
+        },
+        {
+            "datasetid": "occupation-parkings-temps-reel",
+            "recordid": "8aeb81ff05313eb624d6bf1ab21164c6b446d72c",
+            "fields": {
+                "nom_parking": "Parking Saint Nicolas",
+                "etat": 1,
+                "ident": 19,
+                "infousager": "LIBRE",
+                "idsurfs": "1395_DEP_21",
+                "libre": 360,
+                "total": 360,
+                "etat_descriptif": "Ouvert"
+            },
+            "record_timestamp": "2020-12-20T12:51:00.704000+00:00"
+        },
+        {
+            "datasetid": "occupation-parkings-temps-reel",
+            "recordid": "b355e2fb61f339d460ef33d66466a88db14d9090",
+            "fields": {
+                "nom_parking": "Parking Ducs d'Alsace",
+                "etat": 1,
+                "ident": 5,
+                "infousager": "540",
+                "idsurfs": "1379_DEP_5",
+                "libre": 541,
+                "total": 600,
+                "etat_descriptif": "Ouvert"
+            },
+            "record_timestamp": "2020-12-20T12:51:00.704000+00:00"
+        },
+        {
+            "datasetid": "occupation-parkings-temps-reel",
+            "recordid": "2c5b0ffaaa82489c355ae5d8ef5f3df06e215905",
+            "fields": {
+                "nom_parking": "Parking Gare courte dur\u00e9e",
+                "etat": 1,
+                "ident": 8,
+                "infousager": "30",
+                "idsurfs": "1381_DEP_7",
+                "libre": 36,
+                "total": 188,
+                "etat_descriptif": "Ouvert"
+            },
+            "record_timestamp": "2020-12-20T12:51:00.704000+00:00"
+        },
+        {
+            "datasetid": "occupation-parkings-temps-reel",
+            "recordid": "14bc6599e3204fa86a70fa2290a7243feb9ce3e2",
+            "fields": {
+                "nom_parking": "Parking Parc des romains",
+                "etat": 1,
+                "ident": 31,
+                "infousager": "290",
+                "idsurfs": "2356_DEP_38",
+                "libre": 299,
+                "total": 324,
+                "etat_descriptif": "Ouvert"
+            },
+            "record_timestamp": "2020-12-20T12:51:00.704000+00:00"
+        },
+        {
+            "datasetid": "occupation-parkings-temps-reel",
+            "recordid": "3f6796cb849d5703c6134d449a5e81e5437cacb3",
+            "fields": {
+                "nom_parking": "Parking Austerlitz",
+                "etat": 1,
+                "ident": 21,
+                "infousager": "310",
+                "idsurfs": "1375_DEP_1",
+                "libre": 315,
+                "total": 464,
+                "etat_descriptif": "Ouvert"
+            },
+            "record_timestamp": "2020-12-20T12:51:00.704000+00:00"
+        },
+        {
+            "datasetid": "occupation-parkings-temps-reel",
+            "recordid": "3655d6d4895bf2f40cb694fb0df83324a6123aa3",
+            "fields": {
+                "nom_parking": "Parking Kleber Homme de fer",
+                "etat": 1,
+                "ident": 12,
+                "infousager": "200",
+                "idsurfs": "1388_DEP_14",
+                "libre": 201,
+                "total": 467,
+                "etat_descriptif": "Ouvert"
+            },
+            "record_timestamp": "2020-12-20T12:51:00.704000+00:00"
+        },
+        {
+            "datasetid": "occupation-parkings-temps-reel",
+            "recordid": "987af7c97ab6c693cd5cbbec6a9836b0fdb6477d",
+            "fields": {
+                "nom_parking": "Parking Robertsau Boecklin",
+                "etat": 1,
+                "ident": 15,
+                "infousager": "80",
+                "idsurfs": "1393_DEP_19",
+                "libre": 84,
+                "total": 92,
+                "etat_descriptif": "Ouvert"
+            },
+            "record_timestamp": "2020-12-20T12:51:00.704000+00:00"
+        },
+        {
+            "datasetid": "occupation-parkings-temps-reel",
+            "recordid": "0e4630510ada39e748493da2cc611e669529f465",
+            "fields": {
+                "nom_parking": "Parking Tanneurs",
+                "etat": 1,
+                "ident": 20,
+                "infousager": "78",
+                "idsurfs": "1397_DEP_23",
+                "libre": 78,
+                "total": 180,
+                "etat_descriptif": "Ouvert"
+            },
+            "record_timestamp": "2020-12-20T12:51:00.704000+00:00"
+        },
+        {
+            "datasetid": "occupation-parkings-temps-reel",
+            "recordid": "2b18dc900de0b23c9217b300f7f8e408aac8aeb9",
+            "fields": {
+                "nom_parking": "Parking Elsau",
+                "etat": 1,
+                "ident": 6,
+                "infousager": "200",
+                "idsurfs": "1380_DEP_6",
+                "libre": 203,
+                "total": 220,
+                "etat_descriptif": "Ouvert"
+            },
+            "record_timestamp": "2020-12-20T12:51:00.704000+00:00"
+        },
+        {
+            "datasetid": "occupation-parkings-temps-reel",
+            "recordid": "d6686d72b5346e6e575a261b53aac598ce07607d",
+            "fields": {
+                "nom_parking": "Parking Hoenheim gare",
+                "etat": 1,
+                "ident": 24,
+                "infousager": "270",
+                "idsurfs": "1387_DEP_13",
+                "libre": 270,
+                "total": 340,
+                "etat_descriptif": "Ouvert"
+            },
+            "record_timestamp": "2020-12-20T12:51:00.704000+00:00"
+        },
+        {
+            "datasetid": "occupation-parkings-temps-reel",
+            "recordid": "809cbdcb820753bccc2f80e86bb7719be6e330a3",
+            "fields": {
+                "nom_parking": "Parking Espace europ\u00e9en de l'entreprise",
+                "etat": 1,
+                "ident": 26,
+                "infousager": "160",
+                "idsurfs": "1399_DEP_25",
+                "libre": 167,
+                "total": 170,
+                "etat_descriptif": "Ouvert"
+            },
+            "record_timestamp": "2020-12-20T12:51:00.704000+00:00"
+        },
+        {
+            "datasetid": "occupation-parkings-temps-reel",
+            "recordid": "c5d478a33935d6ff4909ee24a3dde5afb5ffe197",
+            "fields": {
+                "nom_parking": "Parking H\u00f4pital Hautepierre",
+                "etat": 1,
+                "ident": 28,
+                "infousager": "490",
+                "idsurfs": "1706_DEP_28",
+                "libre": 499,
+                "total": 800,
+                "etat_descriptif": "Ouvert"
+            },
+            "record_timestamp": "2020-12-20T12:51:00.704000+00:00"
+        },
+        {
+            "datasetid": "occupation-parkings-temps-reel",
+            "recordid": "bf3d62cbfffbc14c72f68cc58bae7e2ad5827c80",
+            "fields": {
+                "nom_parking": "Parking Centre Op\u00e9ra Broglie",
+                "etat": 1,
+                "ident": 3,
+                "infousager": "220",
+                "idsurfs": "1378_DEP_4",
+                "libre": 227,
+                "total": 460,
+                "etat_descriptif": "Ouvert"
+            },
+            "record_timestamp": "2020-12-20T12:51:00.704000+00:00"
+        },
+        {
+            "datasetid": "occupation-parkings-temps-reel",
+            "recordid": "8f6d5e1a2ba96b41a51050e7b8727f6c72a4a057",
+            "fields": {
+                "nom_parking": "Parking Baggersee",
+                "etat": 1,
+                "ident": 4,
+                "infousager": "410",
+                "idsurfs": "1376_DEP_2",
+                "libre": 417,
+                "total": 460,
+                "etat_descriptif": "Ouvert"
+            },
+            "record_timestamp": "2020-12-20T12:51:00.704000+00:00"
+        },
+        {
+            "datasetid": "occupation-parkings-temps-reel",
+            "recordid": "d40253ffc9ba438cf73720ebccdb890510a765ae",
+            "fields": {
+                "nom_parking": "Parking Bateliers",
+                "etat": 1,
+                "ident": 2,
+                "infousager": "130",
+                "idsurfs": "1377_DEP_3",
+                "libre": 136,
+                "total": 267,
+                "etat_descriptif": "Ouvert"
+            },
+            "record_timestamp": "2020-12-20T12:51:00.704000+00:00"
+        },
+        {
+            "datasetid": "occupation-parkings-temps-reel",
+            "recordid": "2b28e7461b99edba158a768d97adb26b311d6a35",
+            "fields": {
+                "nom_parking": "Parking Gutenberg",
+                "etat": 1,
+                "ident": 11,
+                "infousager": "50",
+                "idsurfs": "1383_DEP_9",
+                "libre": 56,
+                "total": 233,
+                "etat_descriptif": "Ouvert"
+            },
+            "record_timestamp": "2020-12-20T12:51:00.704000+00:00"
+        },
+        {
+            "datasetid": "occupation-parkings-temps-reel",
+            "recordid": "547d4eb7eab02e48611b61210d28dea1a868a021",
+            "fields": {
+                "nom_parking": "Parking Centre historique Petite France",
+                "etat": 0,
+                "ident": 17,
+                "infousager": "OUVERT",
+                "idsurfs": "1390_DEP_16",
+                "libre": 0,
+                "total": 939,
+                "etat_descriptif": "frequentation temps reel indisponible"
+            },
+            "record_timestamp": "2020-12-20T12:51:00.704000+00:00"
+        },
+        {
+            "datasetid": "occupation-parkings-temps-reel",
+            "recordid": "58fa6b7f9c87c46679ce99a4837e5baea80f0381",
+            "fields": {
+                "nom_parking": "Parking Rotonde",
+                "etat": 1,
+                "ident": 7,
+                "infousager": "140",
+                "idsurfs": "1394_DEP_20",
+                "libre": 141,
+                "total": 450,
+                "etat_descriptif": "Ouvert"
+            },
+            "record_timestamp": "2020-12-20T12:51:00.704000+00:00"
+        },
+        {
+            "datasetid": "occupation-parkings-temps-reel",
+            "recordid": "d6079ce81c9d022885d420d4424b62775bfa94ee",
+            "fields": {
+                "nom_parking": "Parking Sainte Aur\u00e9lie Gare",
+                "etat": 1,
+                "ident": 9,
+                "infousager": "460",
+                "idsurfs": "1396_DEP_22",
+                "libre": 460,
+                "total": 557,
+                "etat_descriptif": "Ouvert"
+            },
+            "record_timestamp": "2020-12-20T12:51:00.704000+00:00"
+        },
+        {
+            "datasetid": "occupation-parkings-temps-reel",
+            "recordid": "58094757a37e3e546c4724598e05d969b1395264",
+            "fields": {
+                "nom_parking": "Parking P3 Wilson",
+                "etat": 1,
+                "ident": 22,
+                "infousager": "700",
+                "idsurfs": "1386_DEP_12",
+                "libre": 708,
+                "total": 1211,
+                "etat_descriptif": "Ouvert"
+            },
+            "record_timestamp": "2020-12-20T12:51:00.704000+00:00"
+        },
+        {
+            "datasetid": "occupation-parkings-temps-reel",
+            "recordid": "a368f9aac255684850b62fbda76b96fd7c0e6e2e",
+            "fields": {
+                "nom_parking": "Parking Poteries",
+                "etat": 1,
+                "ident": 25,
+                "infousager": "70",
+                "idsurfs": "1398_DEP_24",
+                "libre": 78,
+                "total": 107,
+                "etat_descriptif": "Ouvert"
+            },
+            "record_timestamp": "2020-12-20T12:51:00.704000+00:00"
+        },
+        {
+            "datasetid": "occupation-parkings-temps-reel",
+            "recordid": "0e214514664e0d55bf9a847089e912438aec7673",
+            "fields": {
+                "nom_parking": "Parking Rivetoile",
+                "etat": 1,
+                "ident": 23,
+                "infousager": "690",
+                "idsurfs": "1392_DEP_18",
+                "libre": 698,
+                "total": 1132,
+                "etat_descriptif": "Ouvert"
+            },
+            "record_timestamp": "2020-12-20T12:51:00.704000+00:00"
+        },
+        {
+            "datasetid": "occupation-parkings-temps-reel",
+            "recordid": "1436c55a76fc7910b5a0336eb74cc0957870a8fd",
+            "fields": {
+                "nom_parking": "P1 Esplanade - Centre commercial",
+                "etat": 1,
+                "ident": 27,
+                "infousager": "220",
+                "idsurfs": "1703_DEP_27",
+                "libre": 229,
+                "total": 251,
+                "etat_descriptif": "Ouvert"
+            },
+            "record_timestamp": "2020-12-20T12:51:00.704000+00:00"
+        },
+        {
+            "datasetid": "occupation-parkings-temps-reel",
+            "recordid": "2b15689c04478fcad8c964a5d9f3c0148eb70126",
+            "fields": {
+                "etat": 1,
+                "ident": 30,
+                "infousager": "LIBRE",
+                "libre": 719,
+                "total": 719,
+                "etat_descriptif": "Ouvert"
+            },
+            "record_timestamp": "2020-12-20T12:51:00.704000+00:00"
+        }
+    ],
+    "facet_groups": [
+        {
+            "facets": [
+                {
+                    "count": 28,
+                    "path": "Ouvert",
+                    "state": "displayed",
+                    "name": "Ouvert"
+                },
+                {
+                    "count": 1,
+                    "path": "Ferm\u00e9",
+                    "state": "displayed",
+                    "name": "Ferm\u00e9"
+                },
+                {
+                    "count": 1,
+                    "path": "frequentation temps reel indisponible",
+                    "state": "displayed",
+                    "name": "frequentation temps reel indisponible"
+                }
+            ],
+            "name": "etat_descriptif"
+        }
+    ]
+}
