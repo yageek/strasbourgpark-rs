@@ -4,9 +4,6 @@ version = "0.1.0"
 authors = ["Yannick Heinrich <yannick.heinrich@gmail.com>"]
 edition = "2018"
 
-[workspace]
-members = ["strasbourgpark-c"]
-
 [dependencies]
 bytes = "0.5"
 
