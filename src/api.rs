@@ -7,126 +7,25 @@ pub const LOCATION_URL: &'static str =
 /// The url of the status endpoint
 pub const STATUS_URL: &'static str =
     "https://data.strasbourg.eu/api/records/1.0/search/?dataset=occupation-parkings-temps-reel";
-
+pub trait TestableRecord {
+    fn is_valid(&self) -> bool;
+}
 mod deserialize {
 
-    use std::marker::PhantomData;
-
     use super::{Location, Record};
-    use serde::de::{IgnoredAny, MapAccess, SeqAccess, Visitor};
+    use serde::de::{SeqAccess, Visitor};
     use serde::{Deserialize, Deserializer};
 
-    impl<'de, T: Deserialize<'de>> Deserialize<'de> for super::Record<T> {
-        fn deserialize<D>(deserializer: D) -> Result<Self, D::Error>
-        where
-            D: serde::Deserializer<'de>,
-        {
-            enum Field {
-                Id,
-                Fields,
-                Unknown,
-            }
-
-            impl<'de> Deserialize<'de> for Field {
-                fn deserialize<D>(deserializer: D) -> Result<Self, D::Error>
-                where
-                    D: Deserializer<'de>,
-                {
-                    struct FieldVisitor;
-
-                    impl<'de> Visitor<'de> for FieldVisitor {
-                        type Value = Field;
-
-                        fn expecting(
-                            &self,
-                            formatter: &mut std::fmt::Formatter,
-                        ) -> std::fmt::Result {
-                            formatter.write_str("`recordid` or `fields`")
-                        }
-
-                        fn visit_str<E>(self, value: &str) -> Result<Field, E>
-                        where
-                            E: serde::de::Error,
-                        {
-                            match value {
-                                "recordid" => Ok(Field::Id),
-                                "fields" => Ok(Field::Fields),
-                                _ => Ok(Field::Unknown),
-                            }
-                        }
-                    }
-                    deserializer.deserialize_identifier(FieldVisitor)
-                }
-            }
-
-            struct RecordVisitor<T> {
-                marker: PhantomData<T>,
-            }
-
-            impl<'de, T> Visitor<'de> for RecordVisitor<T>
-            where
-                T: Deserialize<'de>,
-            {
-                type Value = Record<T>;
-
-                fn expecting(&self, formatter: &mut std::fmt::Formatter) -> std::fmt::Result {
-                    formatter.write_str("expecting a map size length array")
-                }
-                fn visit_map<V>(self, mut map: V) -> Result<Record<T>, V::Error>
-                where
-                    V: MapAccess<'de>,
-                {
-                    let mut ids = None;
-                    let mut fields = None;
-                    while let Some(key) = map.next_key()? {
-                        match key {
-                            Field::Id => {
-                                if ids.is_some() {
-                                    return Err(serde::de::Error::duplicate_field("recordsid"));
-                                }
-                                ids = Some(map.next_value()?);
-                            }
-                            Field::Fields => {
-                                if fields.is_some() {
-                                    return Err(serde::de::Error::duplicate_field("fields"));
-                                }
-                                fields = Some(map.next_value()?);
-                            }
-                            _ => {
-                                let _elem = map.next_value::<IgnoredAny>()?;
-                            }
-                        }
-                    }
-
-                    let ids = ids.ok_or_else(|| serde::de::Error::missing_field("recordsid"))?;
-                    let fields = fields.ok_or_else(|| serde::de::Error::missing_field("fields"))?;
-                    Ok(Record {
-                        id: ids,
-                        inner: fields,
-                    })
-                }
-            }
-
-            const FIELDS: &'static [&'static str] = &["idsurfs", "fields"];
-            deserializer.deserialize_struct(
-                "Record",
-                FIELDS,
-                RecordVisitor {
-                    marker: PhantomData::default(),
-                },
-            )
-        }
-    }
-
-    pub(super) fn failed_records<'de, D, T>(deserializer: D) -> Result<Vec<Record<T>>, D::Error>
+    pub(super) fn deserialize_record<'de, D, T>(deserializer: D) -> Result<Vec<Record<T>>, D::Error>
     where
+        T: Deserialize<'de> + super::TestableRecord,
         D: Deserializer<'de>,
-        T: Deserialize<'de>,
     {
-        let elements: Vec<Option<Record<T>>> = Deserialize::deserialize(deserializer)?;
-
-        let elements: Vec<Record<T>> = elements.into_iter().filter_map(|e| e).collect();
-        Ok(elements)
+        let elements: Vec<Record<T>> = Deserialize::deserialize(deserializer)?;
+        Ok(elements
+            .into_iter()
+            .filter(|r| r.inner.is_valid())
+            .collect())
     }
 
     pub(super) fn position_to_location<'de, D>(deserializer: D) -> Result<Location, D::Error>
@@ -179,11 +78,13 @@ mod deserialize {
 
 /// A record represents an item of some data
 /// with a specific id.
-#[derive(Debug)]
+#[derive(Debug, Deserialize)]
 pub struct Record<T> {
     /// The identifier of the record
+    #[serde(rename(deserialize = "recordid"))]
     pub id: String,
 
+    #[serde(rename(deserialize = "fields"))]
     pub(crate) inner: T,
 }
 
@@ -198,9 +99,8 @@ pub struct OpenDataResponse<T> {
     pub pagination: Pagination,
 
     /// The sets of records inside the response
-
-    #[serde(bound(deserialize = "T: Deserialize<'de>"))]
-    #[serde(deserialize_with = "deserialize::failed_records")]
+    #[serde(bound = "T: TestableRecord + Deserialize<'de>")]
+    #[serde(deserialize_with = "deserialize::deserialize_record")]
     pub records: Vec<Record<T>>,
 }
 /// A struct holding the information relative
@@ -265,11 +165,18 @@ pub struct LocationOpenData {
     pub blind_access: bool,
 }
 
+impl TestableRecord for LocationOpenData {
+    fn is_valid(&self) -> bool {
+        true
+    }
+}
 #[derive(Debug, Deserialize)]
 pub struct StatusOpenData {
     #[serde(rename(deserialize = "idsurfs"))]
+    #[serde(default)]
     pub id: String,
 
+    #[serde(default)]
     #[serde(rename(deserialize = "nom_parking"))]
     pub name: String,
 
@@ -281,6 +188,13 @@ pub struct StatusOpenData {
 
     pub total: u16,
 
+    #[serde(default)]
     #[serde(rename(deserialize = "etat_descriptif"))]
     pub users_info: Option<String>,
+}
+
+impl TestableRecord for StatusOpenData {
+    fn is_valid(&self) -> bool {
+        !self.id.is_empty() && !self.name.is_empty()
+    }
 }

@@ -1,8 +1,13 @@
 [package]
 name = "strasbourgpark"
+description = "A crate allowing to interact with the Strasbourg OpenData for parking states at https://data.strasbourg.eu/pages/accueil/"
+homepage = "https://github.com/yageek/strasbourgpark-rs"
+repository = "https://github.com/yageek/strasbourgpark-rs"
 version = "0.1.0"
 authors = ["Yannick Heinrich <yannick.heinrich@gmail.com>"]
 edition = "2018"
+license-file = "LICENSE.txt"
+readme = "README.md"
 
 [dependencies]
 bytes = "0.5"

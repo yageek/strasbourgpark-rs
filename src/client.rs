@@ -115,7 +115,7 @@ impl Client {
 
     async fn fetch_all_pages<T>(&self, uri: &str) -> Result<Vec<T>, ClientError>
     where
-        T: DeserializeOwned + Send + 'static,
+        T: DeserializeOwned + Send + 'static + crate::api::TestableRecord,
     {
         // Get the first page
         let first: OpenDataResponse<T> = self.fetch(uri, 0, self.pagination).await?;
@@ -185,7 +185,8 @@ impl Client {
         } else {
             // Decoding
             let body = hyper::body::aggregate(stream).await?;
-            let t = tokio::task::spawn_blocking(move || serde_json::from_reader(body.reader())).await??;
+            let t = tokio::task::spawn_blocking(move || serde_json::from_reader(body.reader()))
+                .await??;
             Ok(t)
         }
     }

@@ -31,5 +31,5 @@ fn deserialize_bad_payload() {
     let value: OpenDataResponse<StatusOpenData> =
         serde_json::from_str(content).expect("should take errors into account");
 
-    assert_eq!(28, value.records.len());
+    assert_eq!(29, value.records.len());
 }
